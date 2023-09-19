@@ -51,7 +51,7 @@ export default function TextForm(props) {
         <h2 style={{color: props.mode === 'dark' ? 'white' : 'black'}}>
           Your text details
         </h2>
-        <p style={{color: props.mode === 'dark' ? 'white' : 'black'}}>Total {text.split(" ").length} Words and {text.length} characters</p>
+        <p style={{color: props.mode === 'dark' ? 'white' : 'black'}}>Total {text.split(/\s+/).filter((elem)=>{ return elem.length !==0}).length} Words and {text.length} characters</p>
       </div>
       </div> 
 
